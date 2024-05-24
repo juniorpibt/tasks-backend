@@ -30,7 +30,7 @@ pipeline {
 			steps {
 				sleep(10)
 				timeout(1){
-					waitForQualityGate abortPipeline: false, crentetialsId: 'TOKEN_SONAR'
+					waitForQualityGate abortPipeline: true, credentialsId: 'TOKEN_SONAR'
 				}
 			}
 		}
